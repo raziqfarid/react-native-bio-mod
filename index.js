@@ -1,3 +1,3 @@
 import { NativeModules } from 'react-native';
 
-export default NativeModules.BioMod;
+module.exports = NativeModules.BioMod;
