@@ -5,10 +5,11 @@
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(sampleMethod:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(sampleMethod: (RCTResponseSenderBlock)callback)
 
 {
-    resolve(true);
+   NSArray *nativeModuleList = @[@"react-native-fbsdk", @"react-native-camera", @"react-native-maps"];
+   callback(@[[NSNull null], nativeModuleList]);
 //    // TODO: Implement some actually useful functionality
 //    callback(@[[NSString stringWithFormat: @"numberArgument: %@ stringArgument: %@", numberArgument, stringArgument]]);
 }
